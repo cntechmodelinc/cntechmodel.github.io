@@ -64,53 +64,25 @@ footer a i {
 }
 
 header {
-    background-color: white;
-    /* Set a background color for the header */
-    color: darkred;
-    /* Set text color to white */
-    padding: 0 20px;
-    /* Add padding for spacing */
-    text-align: center;
-    /* Center-align text within the header */
+    padding: 0;
+    background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
-.header-content {
-    max-width: 960px;
-    /* Limit content width */
+header img{
     margin: 0 auto;
-    /* Center content horizontally */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    max-width: 100px;
-    /* Adjust the maximum width of your logo */
     height: auto;
-}
-
-.slogan {
-    font-size: 1.8rem;
-    /* Adjust the font size of the slogan */
-    margin: 0;
-    text-align: center;
-    /* Center-align the slogan text */
+    width: 800px;
+    background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
 .container {
     background-color: whitesmoke;
-    /* Background color of the container */
     border-radius: 20px;
-    /* Adjust the radius for more or less rounding */
     padding: 20px;
-    /* Padding inside the container */
     width: 70%;
-    /* Adjust the width as needed */
     margin: 0 auto;
-    /* Center the container horizontally */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Add a box shadow for depth */
 }
 
 .container h1 {
