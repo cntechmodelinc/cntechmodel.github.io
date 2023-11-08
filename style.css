@@ -71,13 +71,12 @@ header {
 header img{
     margin: 0 auto;
     display: flex;
-    height: auto;
-    width: 800px;
     background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
 .container {
     background-color: whitesmoke;
+    color: darkslategray;
     border-radius: 20px;
     padding: 20px;
     width: 70%;
@@ -89,16 +88,6 @@ header img{
     color: darkred;
 }
 
-.container p {
-    color: darkslategray;
-}
-
-h2 {
+.container h2 {
     color: steelblue;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 10px;
-    color: darkslategray;
 }
