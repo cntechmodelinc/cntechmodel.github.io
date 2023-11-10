@@ -85,7 +85,7 @@ header img {
     color: darkslategray;
     border-radius: 20px;
     padding: 20px;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     list-style: none;
@@ -102,6 +102,12 @@ header img {
 .container ul {
     list-style: none;
     padding: 0;
+    list-style-position: inside;
+}
+
+.container li {
+    display: flex;
+    margin-bottom: 0.2em;
 }
 
 .container li::before {
@@ -109,5 +115,7 @@ header img {
     font-family: "Font Awesome 6 Free";
     font-size: small;
     margin-right: 8px;
+    margin-top: 0.3em;
     color: darkred;
+    font-weight: 900; 
 }
