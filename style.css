@@ -28,10 +28,6 @@ nav a:hover {
     background-color: steelblue;
 }
 
-nav i {
-    justify-content: space-between;
-}
-
 section.tab-content {
     display: none;
     padding: 20px;
@@ -67,12 +63,12 @@ footer a i {
 
 header {
     padding: 0;
+    display: flex;
     background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
 header img {
     margin: 0 auto;
-    display: flex;
     background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
