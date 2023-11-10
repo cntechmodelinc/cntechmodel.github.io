@@ -28,7 +28,7 @@ nav a:hover {
     background-color: steelblue;
 }
 
-section.tab-content {
+.tab-content {
     display: none;
     padding: 20px;
 }
@@ -52,7 +52,6 @@ footer a {
     color: white;
     text-decoration: none;
     display: inline-flex;
-    align-items: center;
 }
 
 footer a i {
@@ -63,13 +62,20 @@ footer a i {
 
 header {
     padding: 0;
-    display: flex;
+    text-align: center;
     background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
 }
 
 header img {
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
+    display: block;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    header img {
+        max-width: 80%;
+    }
 }
 
 .container {
