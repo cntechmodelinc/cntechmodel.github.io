@@ -7,33 +7,166 @@
     <title>CN-TECH Model Inc.</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: darkred;
+            color: white;
+            font-size: x-large;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: steelblue;
+        }
+
+        .tab-content {
+            padding: 20px;
+            display: none;
+            flex: 1;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        footer {
+            background-color: steelblue;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+        }
+
+        footer a i {
+            margin-right: 5px;
+            font-size: x-large;
+            justify-content: space-between;
+        }
+
+        header {
+            padding: 0;
+            background-image: linear-gradient(to bottom, whitesmoke, rgb(233, 201, 199));
+        }
+
+        header img {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header img {
+                max-width: 80%;
+            }
+        }
+
+        .container {
+            background-color: whitesmoke;
+            color: darkslategray;
+            border-radius: 20px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            color: darkred;
+        }
+
+        .container h2 {
+            color: steelblue;
+        }
+
+        .container ul {
+            padding: 0;
+            list-style-position: inside;
+        }
+
+        .container li {
+            display: flex;
+            margin-bottom: 0.2em;
+        }
+
+        .container li::before {
+            content: "\f192";
+            font-family: "Font Awesome 6 Free";
+            font-size: small;
+            margin-right: 8px;
+            margin-top: 0.3em;
+            color: darkred;
+            font-weight: 900;
+        }
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5JMCHBB92"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-V5JMCHBB92');
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinksAndBanner = document.querySelectorAll('nav a, header a');
+            const sections = document.querySelectorAll('section.tab-content');
+            document.getElementById('home').classList.add('active');
+
+            navLinksAndBanner.forEach((element) => {
+                element.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = element.getAttribute('href').substring(1);
+                    sections.forEach((section) => section.classList.remove('active'));
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
     </script>
 </head>
 
 <body>
     <header>
-        <img src="banner.png" alt="CN-TECH Model Inc.">
-    </header>
-    <nav>
         <a href="#home">
-            <i class="fas fa-home"></i>
+            <img src="banner.png" alt="CN-TECH Model Inc.">
         </a>
-        <a href="#services">
-            <i class="fas fa-user-gear"></i>&nbsp;&nbsp;Services
-        </a>
-        <a href="#wins">
-            <i class="fa-solid fa-ranking-star"></i>
-        </a>
-    </nav>
+        <nav>
+            <a href="#home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#services">
+                <i class="fas fa-user-gear"></i>&nbsp;&nbsp;Services
+            </a>
+            <a href="#wins">
+                <i class="fa-solid fa-ranking-star"></i>
+            </a>
+        </nav>
+    </header>
+   
     <section id="home" class="tab-content">
         <div class="container">
             <h1>Welcome to CN-TECH Model Inc.</h1>
@@ -124,8 +257,6 @@
             <i class="fas fa-envelope-square"></i> info@cntechmodel.biz
         </a>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
